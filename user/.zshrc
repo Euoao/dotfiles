@@ -92,6 +92,7 @@ plugins=(
     docker
     safe-paste
     tmux
+    repo
     z
     copyfile
     copypath
@@ -143,13 +144,10 @@ source $ZSH/oh-my-zsh.sh
 
 unsetopt beep # 关闭声音 
 
-# about proxy
-source ~/.proxyrc 
+# lzd: aliased to lazydocker
+alias lzd='lazydocker'
 
-# ld: aliased to lazydocker
-alias ld='lazydocker'
-
-# lgL aliased to lazygit
-alias lg='lazygit'
+# lzg aliased to lazygit
+alias lzg='lazygit'
 
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
