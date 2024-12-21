@@ -1,6 +1,8 @@
 # proxy
 proxy() {
-  export hostip=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*') #获得网关地址
+  # 使用mirrored
+  export hostip=127.0.0.1 
+  # export hostip=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*') #获得网关地址
   export proxyPort=7897 #端口
   export https_proxy="http://${hostip}:${proxyPort}";
   export http_proxy="http://${hostip}:${proxyPort}";
