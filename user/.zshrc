@@ -141,6 +141,9 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf-tab.zsh ] && source ~/.fzf-tab.zsh
 
+# about proxy
+[ -f ~/.wsl-proxy.zsh ] && source ~/.wsl-proxy.zsh
+
 
 unsetopt beep # 关闭声音 
 
@@ -150,4 +153,5 @@ alias lzd='lazydocker'
 # lzg aliased to lazygit
 alias lzg='lazygit'
 
+# Set the repo to use Tsinghua mirror
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
