@@ -1,0 +1,8 @@
+gui:
+    returnImmediately: true
+customCommands:
+    containers:
+        - name: bash
+          attach: true
+          command: bash -c "$HOME/codetree/repo/drydock/docker_into.sh {{ .Container.Name }}"
+          serviceNames: []

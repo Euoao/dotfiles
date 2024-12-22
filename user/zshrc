@@ -141,8 +141,8 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf-tab.zsh ] && source ~/.fzf-tab.zsh
 
-# about proxy
-[ -f ~/.wsl-proxy.zsh ] && source ~/.wsl-proxy.zsh
+# about function
+[ -f ~/.function.zsh ] && source ~/.function.zsh
 
 
 unsetopt beep # 关闭声音 
