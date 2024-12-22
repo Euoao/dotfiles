@@ -1,9 +1,9 @@
 # proxy
 proxy() {
   # 使用mirrored
-  export hostip=127.0.0.1 
+  hostip=127.0.0.1 
   # export hostip=$(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*') #获得网关地址
-  export proxyPort=7897 #端口
+  proxyPort=7897 #端口
   export https_proxy="http://${hostip}:${proxyPort}";
   export http_proxy="http://${hostip}:${proxyPort}";
   export all_proxy="socks5://${hostip}:${proxyPort}";
@@ -14,7 +14,6 @@ proxy() {
   echo "Proxy has been opened."
 }
 unproxy() {
-  unset hostip;
   unset https_proxy;
   unset http_proxy;
   unset all_proxy;
