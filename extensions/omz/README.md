@@ -6,6 +6,9 @@
 
 The `install.sh` script will add the following custom plugins to Oh-My-Zsh:
 
+### [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+A Zsh theme
+
 ### [fzf-tab](https://github.com/Aloxaf/fzf-tab)
 Enhanced tab completion using fzf fuzzy finder.
 
