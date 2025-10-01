@@ -81,10 +81,6 @@ source $ZSH/oh-my-zsh.sh
 # Load zoxide
 eval "$(zoxide init zsh)"
 
-# Load gh and gh copilot
-eval "$(gh completion -s zsh)"
-eval "$(gh copilot alias -- zsh)"
-
 #=======================
 # Other Settings
 #=======================
@@ -96,5 +92,4 @@ unsetopt beep
 #=======================
 # Development tools
 alias lzd='lazydocker'  # Docker TUI
-alias lzg='lazygit'     # Git TUI
 
