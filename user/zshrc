@@ -18,10 +18,20 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # Repo mirror source
 export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'
 
+# Default editor
+export VISUAL=vim
+export EDITOR=vim
+
 # Add user's private bin to PATH
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# uv python
+case ":$PATH:" in
+  *":$HOME/.venvs/global/bin:"*) ;;
+  *) export PATH="$HOME/.venvs/global/bin:$PATH" ;;
+esac
 
 #=======================
 # Oh-my-zsh Theme
@@ -50,6 +60,7 @@ plugins=(
     # Development tools
     bazel
     docker
+    git-open
     repo
     tmux
     
@@ -78,8 +89,12 @@ source $ZSH/oh-my-zsh.sh
 # Load custom functions
 [ -f ~/.function.zsh ] && source ~/.function.zsh
 
-# Load zoxide
+# Load command integrations
 eval "$(zoxide init zsh)"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+eval "$(codex completion zsh)"
+eval "$(omp completions zsh)"
 
 #=======================
 # Other Settings
