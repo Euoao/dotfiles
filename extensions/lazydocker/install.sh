@@ -6,7 +6,7 @@ export DIR=${SCRIPT_DIR}/tmp
 
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
-sudo mv ${DIR}/lazydocker /usr/local/bin
+sudo mv ${DIR}/lazydocker ~/.local/bin
 
 rmdir ${SCRIPT_DIR}/tmp
 
