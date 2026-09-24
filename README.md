@@ -1,6 +1,10 @@
 # dotfiles
 @Euoao does dotfiles
 
+## Environment
+- WSL 2
+- Ubuntu 24.04 LTS
+
 
 ## Tool set
 Please ensure these tools are installed before setup:

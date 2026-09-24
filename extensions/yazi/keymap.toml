@@ -1,0 +1,5 @@
+[mgr]
+append_keymap = [
+    { on = [ "c", "p" ], run = "plugin diff",  desc = "Diff selected with hovered and copy patch" },
+    { on = [ "c", "m" ], run = "plugin chmod", desc = "Chmod selected files" },
+]
