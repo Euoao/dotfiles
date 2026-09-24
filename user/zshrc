@@ -32,6 +32,7 @@ case ":$PATH:" in
   *":$HOME/.venvs/global/bin:"*) ;;
   *) export PATH="$HOME/.venvs/global/bin:$PATH" ;;
 esac
+export UV_PYTHON="$HOME/.venvs/global/bin/python3"
 
 #=======================
 # Oh-my-zsh Theme
